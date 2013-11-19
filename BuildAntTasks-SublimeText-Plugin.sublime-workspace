@@ -1,0 +1,420 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"watch",
+				"watch_later_text"
+			],
+			[
+				"watch_later",
+				"watch_later_text"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "BuildAntTask-SublimeText-Plugin.py",
+			"settings":
+			{
+				"buffer_size": 149,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 47.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/ryanhefner/Dropbox/Code/personal/BuildAntTasks-SublimeText-Plugin/BuildAntTask-SublimeText-Plugin.py",
+		"/Users/ryanhefner/Dropbox/Development Projects/vimeo/private/player/lifeguard.yaml",
+		"/Users/ryanhefner/vagrant/vimeo/views_v6/browse/view.browse.faux_player.phtml",
+		"/Users/ryanhefner/vagrant/vimeo/routes/main.php",
+		"/Users/ryanhefner/vagrant/vimeo/controllers/vimeo.controller.misc.php",
+		"/Users/ryanhefner/vagrant/vimeo/controllers_v6/controller.player2.php",
+		"/Users/ryanhefner/vagrant/vimeo/controllers_v6/mobile/controller.mobile.channel.php",
+		"/Users/ryanhefner/vagrant/vimeo/controllers_v6/controller.mobile.php",
+		"/Users/ryanhefner/vagrant/vimeo/classes/vimeo.class.client.php",
+		"/Users/ryanhefner/vagrant/vimeo/base/hoodahoop.base.controller.php",
+		"/Users/ryanhefner/vagrant/vimeo/base/hoodahoop.base.view.php",
+		"/Users/ryanhefner/vagrant/vimeo/web/assets/js/vimeo/classes/widgets/brozar.js",
+		"/Users/ryanhefner/vagrant/vimeo/config/files/dev.ini",
+		"/Users/ryanhefner/vagrant/vimeo/routes/v6.php",
+		"/Users/ryanhefner/vagrant/vimeo/classes/vimeo.class.player2.php",
+		"/Users/ryanhefner/vagrant/vimeo/objects_v6/object.clipembedsettings.php",
+		"/Users/ryanhefner/vagrant/vimeo/web/assets/partners/stingray/index.html",
+		"/Users/ryanhefner/vagrant/vimeo/views_v6/channel/view.channel.custom_stingray.phtml",
+		"/Users/ryanhefner/vagrant/vimeo/asset_manifests/v6.json",
+		"/Users/ryanhefner/vagrant/vimeo/views_v6/channel/view.channel.custom_stingray_stage.phtml",
+		"/Users/ryanhefner/vagrant/vimeo/views_v6/mobile/channel/view.mobile.channel.custom_stingray.phtml",
+		"/Users/ryanhefner/vagrant/vimeo/views_v6/mobile/channel/view.mobile.channel.main.phtml",
+		"/Users/ryanhefner/vagrant/vimeo/web/assets/styles/sass/themes/custom_stingray.scss",
+		"/Users/ryanhefner/vagrant/vimeo/controllers_v6/controller.channel.php",
+		"/Users/ryanhefner/vagrant/vimeo/objects_v6/object.ondemand.php",
+		"/Users/ryanhefner/vagrant/vimeo/objects_v6/object.promocode.php",
+		"/Users/ryanhefner/vagrant/vimeo/views_v6/channel/view.channel.custom_stingray_stage_javascript.phtml",
+		"/Users/ryanhefner/vagrant/vimeo/objects_v6/object.channel.php",
+		"/Users/ryanhefner/vagrant/vimeo/views_v6/mobile/channel/view.mobile.channel.custom_stingray_javascript.phtml",
+		"/Users/ryanhefner/vagrant/vimeo/views_v6/mobile/channel/view.mobile.channel_custom_stingray.phtml",
+		"/Users/ryanhefner/vagrant/vimeo/web/.htaccess",
+		"/Users/ryanhefner/vagrant/vimeo/definitions/definition.clipembedsettings.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"",
+			"controllers_v6/mobile",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"/assets",
+			"FlideoReeltime",
+			"hd.swf",
+			"flexigraph.swf",
+			"features.swf",
+			"expressInstall.swf",
+			"controller.swf",
+			"citysearch.swf",
+			"channels.swf",
+			"unicorn.swf",
+			"doodle.swf",
+			"ryan",
+			"watchLater",
+			"enhancer",
+			"ryan",
+			"$this->addOpenGraphTag('og:image'",
+			"$this->setView(",
+			"channels/corvette",
+			"uploader.swf",
+			"SWFUpload.swf",
+			"pulse.swf",
+			"hubnut.swf",
+			"moogaloop_pulse",
+			"microcron",
+			"mobiloop",
+			"playerAssetUrls",
+			"playerAssetsUrl"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "BuildAntTask-SublimeText-Plugin.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 149,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								103,
+								103
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"project": "BuildAntTasks-SublimeText-Plugin.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"li",
+				"lifeguard.yaml"
+			],
+			[
+				"enhancer/",
+				"web/assets/js/vimeo/classes/enhancer/video_player.js"
+			],
+			[
+				"akis",
+				"classes/vimeo.class.akismet.php"
+			],
+			[
+				"view.browse.fau",
+				"views_v6/browse/view.browse.faux_player.phtml"
+			],
+			[
+				"faux",
+				"web/assets/js/vimeo/controllers/faux_player.js"
+			],
+			[
+				"browse.js",
+				"web/assets/js/vimeo/controllers/browse.js"
+			],
+			[
+				"_ocm",
+				"web_player/assets/sass/_common.scss"
+			],
+			[
+				"hood.app",
+				"base/hoodahoop.base.application.php"
+			],
+			[
+				"dev.ini",
+				"config/files/dev.ini"
+			],
+			[
+				"view.browse.fa",
+				"views_v6/browse/view.browse.faux_player.phtml"
+			],
+			[
+				"object.user",
+				"objects_v6/object.user.php"
+			],
+			[
+				"class.player",
+				"classes/vimeo.class.playerv6.php"
+			],
+			[
+				"object.watch",
+				"objects_v6/object.watchlater.php"
+			],
+			[
+				"object.clip",
+				"objects_v6/object.clip.php"
+			],
+			[
+				"view.browse.clip",
+				"views_v6/browse/view.browse.clips.phtml"
+			],
+			[
+				"manifest",
+				"asset_manifests/v6.json"
+			],
+			[
+				"object.ondeman",
+				"objects_v6/object.ondemand.php"
+			],
+			[
+				"object.promoco",
+				"objects_v6/object.promocode.php"
+			],
+			[
+				"object.promocod",
+				"objects_v6/object.promocode.php"
+			],
+			[
+				"brozar.js",
+				"web/assets/js/vimeo/classes/widgets/brozar.js"
+			],
+			[
+				"object.channel",
+				"objects_v6/object.channel.php"
+			],
+			[
+				"hood.view",
+				"base/hoodahoop.base.view.php"
+			],
+			[
+				"hood.controller",
+				"base/hoodahoop.base.controller.php"
+			],
+			[
+				"controller.mobile",
+				"controllers_v6/controller.mobile.php"
+			],
+			[
+				"controller.channel",
+				"controllers_v6/controller.channel.php"
+			],
+			[
+				"controller.mobile.chn",
+				"controllers_v6/mobile/controller.mobile.channel.php"
+			],
+			[
+				"view.mobile.custom",
+				"views_v6/mobile/channel/view.mobile.channel_custom_stingray.phtml"
+			],
+			[
+				"view.mobile.cu",
+				"views_v6/mobile/channel/view.mobile.channel_custom_stingray.phtml"
+			],
+			[
+				"view.channel.stingray",
+				"views_v6/channel/view.channel.custom_stingray.phtml"
+			],
+			[
+				"stingray/ind",
+				"web/assets/partners/stingray/index.html"
+			],
+			[
+				"controller.player",
+				"controllers_v6/controller.player.php"
+			],
+			[
+				".hta",
+				"web/.htaccess"
+			],
+			[
+				"main.php",
+				"routes/main.php"
+			],
+			[
+				"obejct.clipembed",
+				"objects_v6/object.clipembedsettings.php"
+			],
+			[
+				"clipembedset",
+				"definitions/definition.clipembedsettings.php"
+			],
+			[
+				"class.palyer",
+				"classes/vimeo.class.player2.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 328.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
