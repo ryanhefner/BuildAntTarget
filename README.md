@@ -1,2 +1,2 @@
-BuildAntTasks-SublimeText
+BuildAntTasks-SublimeText-Plugin
 =========================
