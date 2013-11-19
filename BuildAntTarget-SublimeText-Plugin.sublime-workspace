@@ -16,10 +16,18 @@
 	"buffers":
 	[
 		{
-			"file": "BuildAntTask-SublimeText-Plugin.py",
+			"file": "BuildAntTarget-SublimeText-Plugin.py",
 			"settings":
 			{
-				"buffer_size": 149,
+				"buffer_size": 634,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "BuildAntTarget-SublimeText-Plugin.sublime-project",
+			"settings":
+			{
+				"buffer_size": 144,
 				"line_ending": "Unix"
 			}
 		}
@@ -155,29 +163,56 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "BuildAntTask-SublimeText-Plugin.py",
+					"file": "BuildAntTarget-SublimeText-Plugin.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 149,
+						"buffer_size": 634,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								103,
-								103
+								109,
+								109
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "BuildAntTarget-SublimeText-Plugin.sublime-project",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
