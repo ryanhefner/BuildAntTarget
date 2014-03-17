@@ -10,8 +10,8 @@ A [Sublime Text 2](http://www.sublimetext.com/2) and [3](http://www.sublimetext.
 Overview
 --------
 
-A super simple plugin that extends on Sublime Text's existing Ant build support,
-by extending its flexibility, allowing you to build from any open build file
+A super simple plugin that extends Sublime Text's existing Ant build support,
+by adding more flexibility, allowing you to build from any open build file
 in your project, not just a `build.xml` in the root of your project.
 
 It also allows you to select your desired target to build, for projects that have
@@ -20,13 +20,15 @@ more than one target defined.
 Requirements
 ------------
 
-- Make sure you have ANT installed on your machine.
+- Make sure you have Ant installed on your machine.
 	- https://ant.apache.org/manual/install.html
 	- or via [Homebrew](http://brew.sh)
 		- `brew update`
-		`brew install ant`
-- Make sure that your Ant install is linked to `/usr/local/ant` \(*\).
+		- `brew install ant`
+- Make sure that your Ant installation is linked to `/usr/local/ant` \(*\).
 	- `sudo ln -s /usr/local/bin/ant /usr/local/ant`
+		- NOTE: This assumes your existing Ant install is located at `/usr/local/bin/ant`)
+		  You can figure out where you Ant is installed by running, `which ant`
 - That‘s it!
 
 Installation
@@ -43,7 +45,6 @@ automatic updates with changelogs…).
 
 You can install from github if you want, although Package Control automates
 just that. Go to your `Packages` subdirectory under Sublime Text's data directory:
-
 
 ##### Sublime Text 2
 
