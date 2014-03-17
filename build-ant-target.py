@@ -10,27 +10,22 @@ class BuildAntTargetCommand(sublime_plugin.TextCommand):
 		if not self.build_file:
 			return;
 
-		# If it's not an XML file, we don't care
+		# If it's not an XML file, we don't care about it
 		if not self.build_file.endswith(".xml"):
 			return;
-
-		self.working_dir = os.path.dirname(self.build_file);
-		self.targets = [];
 
 		# Find all the available targets in the file
 		self.targets = self._get_targets_from_file(self.build_file);
 
-		# Alert the user and let them know no targets were found
+		# Nothing to build, if not targets found.
 		if not len(self.targets):
 			return;
-		
+
 		# Present target options in popup menu
 		self.view.show_popup_menu(self.targets, self._target_select_callback);
 
 
 	def _target_select_callback(self, index):
-		sublime.status_message(str(index) + " index selected");
-
 		if (index > -1):
 			target = self.targets[index];
 
@@ -45,10 +40,9 @@ class BuildAntTargetCommand(sublime_plugin.TextCommand):
 				"cmd": [
 					build_system,
 					"-f",
-					os.path.split(self.build_file)[1],
+					self.build_file,
 					target
-				],
-				"working_dir": self.working_dir
+				]
 			};
 
 			try:
