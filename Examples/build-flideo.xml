@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><!--ant-->
+<!--
+    Created by Ryan Hefner on 2011-02-28.
+    Copyright (c) 2011-2012 Vimeo. All rights reserved.
+-->
+<project name="Build Flideo SWF" default="build-and-copy-to-deploy-RELEASE" basedir="../../">
+    <description>Build and deploy the Flideo swfs.</description>
+
+    <property file="ant/properties/build.properties" />
+
+    <!-- Flideo Properties -->
+    <property name="swfname" value="flideo.swf" />
+    <property name="swfname-dev" value="flideo.dev.swf" />
+    <property name="link-report" value="link_report.txt" />
+    <property name="link-report-dev" value="link_report_dev.txt" />
+
+    <!-- General Player Properties -->
+    <property name="width" value="640" />
+    <property name="height" value="360" />
+
+    <!-- Targets -->
+    <target name="compile-RELEASE">
+        <exec executable="${mxmlc}">
+            <arg value="-as3=true" />
+            <arg value="-compatibility-version=3.0.0" />
+            <arg value="-source-path" />
+            <arg value="${classroot.dir}" />
+            <arg value="-source-path" />
+            <arg value="${deco.dir}" />
+            <arg value="-library-path" />
+            <arg value="${libs.dir}" />
+            <arg value="-library-path" />
+            <arg value="${akamai.swc}" />
+            <!--arg line="-swf-version=11" /-->
+            <arg line="-target-player=${targetplayer}" />
+            <arg line="-default-frame-rate=${framerate}" />
+            <arg line="-default-background-color=${bgcolor}" />
+            <arg value="-default-size" />
+            <arg value="${width}" />
+            <arg value="${height}" />
+            <arg line="-debug=false" />
+            <arg line="-optimize=true" />
+            <arg line="-strict=true" />
+            <arg line="-warnings=true" />
+            <arg line="-show-unused-type-selector-warnings=true" />
+            <arg value="${classroot.dir}/com/vimeo/flideo/FlideoAPI.as" />
+            <arg value="-output" />
+            <arg value="${deploy.dir}/${swfname}" />
+            <arg value="-link-report" />
+            <arg value="${reports.dir}/${link-report}" />
+            <arg value="-static-link-runtime-shared-libraries" />
+            <arg value="-define=CONFIG::DEBUG,false" />
+            <arg value="-define+=CONFIG::RELEASE,true" />
+            <arg value="-define+=CONFIG::FLASH_10_1,false" />
+        </exec>
+    </target>
+
+    <target name="compile-DEBUG">
+        <exec executable="${mxmlc}">
+            <arg value="-as3=true" />
+            <arg value="-compatibility-version=3.0.0" />
+            <arg value="-source-path" />
+            <arg value="${classroot.dir}" />
+            <arg value="-source-path" />
+            <arg value="${deco.dir}" />
+            <arg value="-library-path" />
+            <arg value="${libs.dir}" />
+            <arg value="-library-path" />
+            <arg value="${akamai.swc}" />
+            <!--arg line="-swf-version=11" /-->
+            <arg line="-target-player=${targetplayer}" />
+            <arg line="-default-frame-rate=${framerate}" />
+            <arg line="-default-background-color=${bgcolor}" />
+            <arg value="-default-size" />
+            <arg value="${width}" />
+            <arg value="${height}" />
+            <arg line="-debug=true" />
+            <arg line="-optimize=true" />
+            <arg line="-strict=true" />
+            <arg line="-warnings=true" />
+            <arg line="-show-unused-type-selector-warnings=true" />
+            <arg value="${classroot.dir}/com/vimeo/flideo/FlideoAPI.as" />
+            <arg value="-output" />
+            <arg value="${deploy.dir}/${swfname-dev}" />
+            <arg value="-link-report" />
+            <arg value="${reports.dir}/${link-report-dev}" />
+            <arg value="-static-link-runtime-shared-libraries" />
+            <arg value="-define=CONFIG::DEBUG,true" />
+            <arg value="-define+=CONFIG::RELEASE,false" />
+            <arg value="-define+=CONFIG::FLASH_10_1,false" />
+        </exec>
+    </target>
+
+    <target name="build-and-copy-to-deploy-RELEASE" depends="compile-RELEASE, copy-to-deploy-RELEASE"></target>
+    <target name="build-and-copy-to-deploy-DEBUG" depends="compile-DEBUG, copy-to-deploy-DEBUG"></target>
+
+    <target name="copy-to-deploy-RELEASE">
+        <echo>Deleting previous SWF from flideo-swfs directory</echo>
+        <delete file="${swf-versions.dir}/${swfname}" />
+        <echo>Copying compiled SWF to flideo-swf deploy directory.</echo>
+        <copy file="${deploy.dir}/${swfname}" todir="${swf-versions.dir}" />
+    </target>
+
+    <target name="copy-to-deploy-DEBUG">
+        <echo>Deleting previous SWF from flideo-swfs directory</echo>
+        <delete file="${swf-versions.dir}/${swfname-dev}" />
+        <echo>Copying compiled SWF to flideo-swf deploy directory.</echo>
+        <copy file="${deploy.dir}/${swfname-dev}" todir="${swf-versions.dir}" />
+    </target>
+
+</project>

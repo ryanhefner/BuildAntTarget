@@ -1,30 +1,72 @@
-import sublime, sublime_plugin
-# from xml.dom.minidom import parse
-# import xml.dom.minidom
+import sublime, sublime_plugin, sys, os
+from xml.dom.minidom import parseString
 
 class BuildAntTargetCommand(sublime_plugin.TextCommand):
-	def onLoad(self, view):
-		# fileName = view.fileName()
-
-		# TODO(hi@ryanhefner.com): See if using the view.settings().get('syntax') would be better for this.
-		# if not fileName.endsWith('.xml')
-		# 	return
-
-		# TODO(hi@ryanhefner.com): Confirm that the XML file is a valid ANT build file.
-
-		# TODO(hi@ryanhefner.com): Loop through the document and make a list of the available actions
-		# TODO(hi@ryanhefner.com): Store the targets in a global array for later use? 
-
-		# print view.fileName(), 'just got loaded'
-		return
-
-	def onModified(self, view):
-		# print view.fileName(), 'modified'
-		return
 
 	def run(self, edit):
-		# TODO(hi@ryanhefner.com): Look into overriding ANT build call/keyboard shortcut
-		
-		# TODO(hi@ryanhefner.com): Present a popup menu with a list of available tasks/targets
+		self.build_file = self.view.file_name();
 
-		self.view.insert(edit, 0, "Hello, World!")
+		# Make sure a view file has been specified
+		if not self.build_file:
+			return;
+
+		# If it's not an XML file, we don't care
+		if not self.build_file.endswith(".xml"):
+			return;
+
+		self.working_dir = os.path.dirname(self.build_file);
+		self.targets = [];
+
+		# Find all the available targets in the file
+		self.targets = self._get_targets_from_file(self.build_file);
+
+		# Alert the user and let them know no targets were found
+		if not len(self.targets):
+			return;
+		
+		# Present target options in popup menu
+		self.view.show_popup_menu(self.targets, self._target_select_callback);
+
+
+	def _target_select_callback(self, index):
+		sublime.status_message(str(index) + " index selected");
+
+		if (index > -1):
+			target = self.targets[index];
+
+			print("Selected target: " + target);
+
+			build_system = "ant";
+
+			if sys.platform.startswith("win32"):
+				build_system = "ant.bat";
+
+			command = {
+				"cmd": [build_system, "-f", self.build_file, target],
+				"working_dir": self.working_dir
+			};
+
+			try:
+				self.view.window().run_command("exec", command);
+			except Exception as ex:
+				sublime.status_message("Error running ANT build: " + ex);
+
+
+	def _get_targets_from_file(self, file):
+		try:
+			f = open(file);
+		except Exception as ex:
+			print("File " + file + " could not be opened.");
+			return[];
+
+		data = f.read();
+		dom = parseString(data);
+
+		targets = [];
+		dom_targets = dom.getElementsByTagName("target");
+
+		for dom_target in dom_targets:
+			target_name = dom_target.getAttributeNode("name").nodeValue;
+			targets.append(target_name);
+
+		return targets;
