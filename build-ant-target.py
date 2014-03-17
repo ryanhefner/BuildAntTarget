@@ -42,7 +42,12 @@ class BuildAntTargetCommand(sublime_plugin.TextCommand):
 				build_system = "ant.bat";
 
 			command = {
-				"cmd": [build_system, "-f", self.build_file, target],
+				"cmd": [
+					build_system,
+					"-f",
+					os.path.split(self.build_file)[1],
+					target
+				],
 				"working_dir": self.working_dir
 			};
 
