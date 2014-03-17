@@ -20,7 +20,7 @@ class BuildAntTargetCommand(sublime_plugin.TextCommand):
 
 
 	def run(self, edit):
-		self.build_file = self.view.file_name();
+		self.build_file = self.view.file_name()
 
 		if not self._check_valid_file(self.build_file):
 			return
