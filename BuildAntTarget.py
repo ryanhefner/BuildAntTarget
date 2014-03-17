@@ -21,6 +21,9 @@ class BuildAntTargetCommand(sublime_plugin.TextCommand):
 		if not len(self.targets):
 			return
 
+		# TODO: Setup settings to be used for plugin, like verbose build output,
+		# 		and other useful features (TBD)
+
 		# Present target options in popup menu
 		self.view.show_popup_menu(self.targets, self._target_select_callback)
 
