@@ -3,22 +3,26 @@ from xml.dom.minidom import parseString
 
 class BuildAntTargetCommand(sublime_plugin.TextCommand):
 
+	def is_enabled(self):
+		file_name = sublime.active_window().active_view().file_name()
+		if not self._check_valid_file(file_name):
+			return False
+
+		return True
+
+
+	def is_visible(self):
+		file_name = sublime.active_window().active_view().file_name()
+		if not self._check_valid_file(file_name):
+			return False
+
+		return True
+
+
 	def run(self, edit):
 		self.build_file = self.view.file_name();
 
-		# Make sure a view file has been specified
-		if not self.build_file:
-			return
-
-		# If it's not an XML file, we don't care about it
-		if not self.build_file.endswith(".xml"):
-			return
-
-		# Find all the available targets in the file
-		self.targets = self._get_targets_from_file(self.build_file)
-
-		# Nothing to build, if not targets found.
-		if not len(self.targets):
+		if not self._check_valid_file(self.build_file):
 			return
 
 		# TODO: Setup settings to be used for plugin, like verbose build output,
@@ -72,3 +76,22 @@ class BuildAntTargetCommand(sublime_plugin.TextCommand):
 			targets.append(target_name)
 
 		return targets
+
+
+	def _check_valid_file(self, file_name):
+		# Make sure a view file has been specified
+		if not file_name:
+			return False
+
+		# If it's not an XML file, we don't care about it
+		if not file_name.endswith(".xml"):
+			return False
+
+		# Find all the available targets in the file
+		self.targets = self._get_targets_from_file(file_name)
+
+		# Nothing to build, if not targets found.
+		if not len(self.targets):
+			return False
+
+		return True

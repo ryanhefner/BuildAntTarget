@@ -1,0 +1,11 @@
+[
+	{
+		"caption": "Build Ant Target",
+		"children": [
+			{
+				"caption": "Build Target",
+				"command": "build_ant_target"
+			}
+		]
+	}
+]

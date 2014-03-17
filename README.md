@@ -17,8 +17,9 @@ in your project, not just a `build.xml` in the root of your project.
 And, it lists the available targets in your build file, for quick target
 selection and building.
 
-Inspired by the work done on [SuperAnt](https://github.com/aphex/SuperAnt), but
-developed with greater flexibility in mind, based on existing project structures.
+Inspired by the [SuperAnt](https://github.com/aphex/SuperAnt) project, but
+developed with a need for greater flexibility, based on existing project
+structure needs.
 
 Requirements
 ------------
@@ -28,7 +29,7 @@ Requirements
 	- or via [Homebrew](http://brew.sh)
 		- `brew update`
 		`brew install ant`
-- Make sure that your ANT install is linked to `/usr/local/ant` \(*\).
+- Make sure that your Ant install is linked to `/usr/local/ant` \(*\).
 	- `sudo ln -s /usr/local/bin/ant /usr/local/ant`
 - That‘s it!
 
@@ -73,8 +74,23 @@ Usage
 
 ## Build Target
 
-- Use the keyboard shortcut, `command+alt+b`, on any opened ANT build file
-- Select from a list of the available targets, via the popup menu
+There are two ways in which you can initiate the building of an Ant target, via
+the Keyboard Shortcut or Context Menu.
+
+**NOTE:** Both of these methods require that you initiate the command from an
+opened, and valid, Ant build file.
+
+### Keyboard Shortcut
+
+- Use the keyboard shortcut, `command+alt+b`, on any opened Ant build file
+- Select target via the popup menu
+- Watch your build happen via the Build Results panel
+
+### Context Menu
+
+- Right-click on the opened build file
+- Navigate to `Build Ant Target > Build Target`
+- Select target via the popup menu
 - Watch your build happen via the Build Results panel
 
 Options
