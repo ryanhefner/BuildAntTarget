@@ -27,8 +27,8 @@ Requirements
 		- `brew install ant`
 - Make sure that your Ant installation is linked to `/usr/local/ant` \(*\).
 	- `sudo ln -s /usr/local/bin/ant /usr/local/ant`
-		- NOTE: This assumes your existing Ant install is located at `/usr/local/bin/ant`)
-		  You can figure out where you Ant is installed by running, `which ant`
+		- NOTE: This assumes your existing Ant install is located at `/usr/local/bin/ant`.
+		  You can figure out where you Ant is installed by running, `which ant`.
 - That‘s it!
 
 Installation
