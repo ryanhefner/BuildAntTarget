@@ -34,7 +34,7 @@ Requirements
 Installation
 ------------
 
-**COMING SOON!** It is available through
+It is available through
 [Sublime Package Contol](http://wbond.net/sublime_packages/package_control) and
 this is the recommended way of installation (brings configuration instructions,
 automatic updates with changelogs…).
