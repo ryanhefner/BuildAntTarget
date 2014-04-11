@@ -28,8 +28,11 @@ class BuildAntTargetCommand(sublime_plugin.TextCommand):
 		# TODO: Setup settings to be used for plugin, like verbose build output,
 		# 		and other useful features (TBD)
 
-		# Present target options in popup menu
-		self.view.show_popup_menu(self.targets, self._target_select_callback)
+		# Present target options
+		if 'show_popup_menu' in dir(self.view):
+			self.view.show_popup_menu(self.targets, self._target_select_callback)
+		else:
+			self.view.window().show_quick_panel(self.targets, self._target_select_callback)
 
 
 	def _target_select_callback(self, index):
